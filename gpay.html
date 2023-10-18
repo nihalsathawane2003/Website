@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallary</title>
+  
+</head><body>
+    <h3>Workplace:</h3>
+    <div class="gallery">
+       
+        <div class="image-container">
+            <img src="images/Sahyagiri.png" alt="Sahyagiri" onclick="showZoomedImage('images/Sahyagiri.png')">
+            <p>Sahyagiri</p>
+        </div>
+        <div class="image-container">
+            <img src="images/Sahyagiri.png" alt="Sahyagiri" onclick="showZoomedImage('images/Sahyagiri.png')">
+            <p>Sahyagiri</p>
+        </div>
+        <div class="image-container">
+            <img src="images/Alkananda.png" alt="Alkananda" onclick="showZoomedImage('images/Alkananda.png')">
+            <p>Alkananda</p>
+        </div>
+        <div class="image-container">
+            <img src="images/Sahyagiri.png" alt="Sahyagiri" onclick="showZoomedImage('images/Sahyagiri.png')">
+            <p>Sahyagiri</p>
+        </div>
+        <div class="image-container">
+            <img src="images/Sahyagiri.png" alt="Sahyagiri" onclick="showZoomedImage('images/Sahyagiri.png')">
+            <p>Sahyagiri</p>
+        </div>
+        <div class="image-container">
+            <img src="images/Alkananda.png" alt="Alkananda" onclick="showZoomedImage('images/Alkananda.png')">
+            <p>Alkananda</p>
+        </div>
+        <!-- Add more images with their respective names -->
+    </div>
+
+    <!-- Modal overlay -->
+    <div class="modal" onclick="hideZoomedImage()">
+        <span class="close" onclick="hideZoomedImage()">&times;</span>
+        <img id="zoomedImage" src="" alt="Zoomed Image">
+    </div>
+
+    <script>
+        function showZoomedImage(imageSrc) {
+            var modal = document.querySelector('.modal');
+            var zoomedImage = document.getElementById('zoomedImage');
+            zoomedImage.src = imageSrc;
+            modal.style.display = 'block';
+        }
+
+        function hideZoomedImage() {
+            var modal = document.querySelector('.modal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 Dr.Babasaheb Ambedkar Technological University.</p>
+    <p>&copy;  All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

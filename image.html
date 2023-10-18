@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 5fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container p {
+            margin: 5px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    
+        /* CSS for gallery and image containers (same as before) */
+        /* ... */
+
+        /* CSS for modal overlay */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* CSS for zoomed image */
+        .modal img {
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* CSS for close button */
+        .close {
+            color: white;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>Gallery</h3>
+    <div class="gallery">
+       
+        <div class="image-container">
+            <img src="images/Sahyagiri.png" alt="Sahyagiri" onclick="showZoomedImage('images/Sahyagiri.png')">
+            <p>Sahyagiri</p>
+        </div>
+        <div class="image-container">
+            <img src="images/Sahyagiri.png" alt="Sahyagiri" onclick="showZoomedImage('images/Sahyagiri.png')">
+            <p>Sahyagiri</p>
+        </div>
+        <div class="image-container">
+            <img src="images/Alkananda.png" alt="Alkananda" onclick="showZoomedImage('images/Alkananda.png')">
+            <p>Alkananda</p>
+        </div>
+        <div class="image-container">
+            <img src="images/Sahyagiri.png" alt="Sahyagiri" onclick="showZoomedImage('images/Sahyagiri.png')">
+            <p>Sahyagiri</p>
+        </div>
+        <div class="image-container">
+            <img src="images/Sahyagiri.png" alt="Sahyagiri" onclick="showZoomedImage('images/Sahyagiri.png')">
+            <p>Sahyagiri</p>
+        </div>
+        <div class="image-container">
+            <img src="images/Alkananda.png" alt="Alkananda" onclick="showZoomedImage('images/Alkananda.png')">
+            <p>Alkananda</p>
+        </div>
+        <!-- Add more images with their respective names -->
+    </div>
+
+    <!-- Modal overlay -->
+    <div class="modal" onclick="hideZoomedImage()">
+        <span class="close" onclick="hideZoomedImage()">&times;</span>
+        <img id="zoomedImage" src="" alt="Zoomed Image">
+    </div>
+
+    <script>
+        function showZoomedImage(imageSrc) {
+            var modal = document.querySelector('.modal');
+            var zoomedImage = document.getElementById('zoomedImage');
+            zoomedImage.src = imageSrc;
+            modal.style.display = 'block';
+        }
+
+        function hideZoomedImage() {
+            var modal = document.querySelector('.modal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

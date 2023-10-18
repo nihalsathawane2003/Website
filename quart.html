@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Traveling Images</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    
+    #content {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f7f7f7;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    
+    .image-container {
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+      animation: slide 50s infinite linear;
+    }
+    
+    p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    
+    @keyframes slide {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Traveling Images</h1>
+  </header>
+
+  <div id="content">
+    <div class="image-grid">
+      <div class="image-container">
+        <img src="flip.png" alt="Image 1">
+        <p>Image 1</p>
+      </div>
+    
+      <div class="image-container">
+        <img src="wipro.jpg" alt="wipro ge 2">
+        <p>Image 2</p>
+      </div>
+    
+      <div class="image-container">
+        <img src="Malaygiri.png" alt="Image 3">
+        <p>Image 3</p>
+      </div>
+    
+      <div class="image-container">
+        <img src="Dhavalgiri.png" alt="Image 4">
+        <p>Image 4</p>
+      </div>
+    
+      <div class="image-container">
+        <img src="Gagangiri.png" alt="Image 5">
+        <p>Image 5</p>
+      </div>
+      
+      <div class="image-container">
+        <img src="persi.jpg" alt="Image 6">
+        <p>Image 6</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
